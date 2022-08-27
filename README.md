@@ -1,6 +1,9 @@
 Course: User-centered Design
+
 Assignment 2: Empirical Evaluation of a new website design
+
 Weight: 45%
+
 Team members:
 - Luu Quoc Nhat (S3924942)
 - Vo Thanh Thong (S ...)
