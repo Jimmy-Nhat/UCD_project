@@ -39,19 +39,19 @@
        </div>
  
        <div class="header-content">
-           <div class="header-content__brand"> 
-               <img src="assets/img/logo.png" alt="Museum Logo">
-               <div>
-                 <p style="font-weight: 600;">HO CHI MINH MUSEUM</p>
-               <br>
-               <p style="font-size: 1.6rem;">Museum of Ho Chi Minh City</p>
-               </div>
-           </div>
+            <a href="index.html" class="header-content__brand"> 
+                <img src="assets/img/logo.png" alt="Museum Logo">
+                <div>
+                <p style="font-weight: 600;">HO CHI MINH MUSEUM</p>
+                <br>
+                <p style="font-size: 1.6rem;">Museum of Ho Chi Minh City</p>
+                </div>
+            </a>
  
            <nav>
                <ul class="nav-container">
                    <li class="nav-item">
-                       <a href="#" class="nav-item__link">Home</a>
+                       <a href="index.html" class="nav-item__link">Home</a>
                    </li>
                    <li class="nav-item">
                        <a href="" class="nav-item__link">Introduction</a>
@@ -82,20 +82,28 @@
            <div class="about-content">
                <div class="about-content-col">
                    <img src="assets/img/img1.png" alt=""> 
-                   <p>Historical architecture of the museum</p>
+                   <div>
+                    <a href="">Historical architecture of the museum</a>
+                   </div>
                </div>
  
                <div class="about-content-col">
                     <iframe  src="https://www.youtube.com/embed/u9ImCg8R6sc" title="Giới thiệu về Bảo tàng Thành phố Hồ Chí Minh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                   <p>Documentary</p>
+                   <div>
+                    <a href="">Documentary</a>
+                   </div>
                     <br>
                     <img src="assets/img/img2.png" alt=""> 
-                   <p>Beautiful pictures of museum</p>
+                    <div>
+                        <a href="">Beautiful pictures of museum</a>
+                    </div>
                 </div>
 
                 <div class="about-content-col">
                     <img src="assets/img/img3.png" alt="">
-                   <p>Beautiful pictures of museum</p>
+                    <div>
+                        <a href="">Beautiful pictures of museum</a>
+                    </div>
                    <br>
                    <div class="about-content-col__trip-info">
                         <p>TRIP INFO</p>
@@ -105,11 +113,12 @@
                         <div>
                             <i class="fa-regular fa-calendar-minus"></i> Monday to Sunday
                         </div>
-                        <div>
+                        <div style="margin-bottom: 20px;">
                             <i class="fa-solid fa-location-dot"></i> 65 Ly Tu, Ben Nghe Ward, District 1, HCMC.
                         </div>
-
-                        <button class="book-btn">Book now</button>
+                        <span class="book-btn">
+                            <a href="contact.html" >Book now</a>
+                        </span>
                    </div>
                 </div>
            </div>
@@ -148,10 +157,17 @@
 
        <!-- Educational activities section -->
        <section class="education">
-        <div class="section-title">
-            <h3 class="sub-heading">EDUCATION</H3>
-            <h2 class="heading">EDUCATIONAL ACTIVITIES</h2>
-        </div>
+            <div class="section-title">
+                <h3 class="sub-heading">EDUCATION</H3>
+                <h2 class="heading">EDUCATIONAL ACTIVITIES</h2>
+            </div>
+            <div class="education-content">
+                <ul class="education-container">
+                    <li class="education-item">
+                        <img src="assets/img/img5.png" alt="">
+                    </li>
+                </ul>
+            </div>
         </section>
       
    </main>
@@ -165,12 +181,12 @@
             <div class="mail-box__icon">
                 <i class="fa-solid fa-envelope-open-text"></i>
             </div>
-            <form action="" method="post">
+            <form action="index.html" method="post">
                 <input type="email" name="email_address" placeholder="Enter your email address">
                 <i class="fa-solid fa-arrow-right-long"></i>
+                <input type="submit" value="submit" style="display: none;">
             </form>
         </div>
-        
 
         <div class="footer-socials">
             <a href="">
@@ -188,7 +204,8 @@
         </div>
 
         <span>Copyrights <i class="fa-regular fa-copyright"></i> 2022
-            <a href="index.html">HCMCMuseum</a>  . All rights reserved.</span>
+            <a href="index.html">HCMCMuseum</a>  . All rights reserved.
+        </span>
    </footer>
 </body>
 </html>
