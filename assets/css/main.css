@@ -168,11 +168,23 @@ section {
     font-size: 1.6rem;
 }
 
+.exhibition-item>a {
+    width: 100%;
+    height: 182px;
+    overflow: hidden;
+    display: block;
+}
+
 .exhibition-item img {
     width: 100%;
     height: 182px;
     object-fit: cover;
     margin-bottom: 16px;
+    transition: 0.8s;
+}
+
+.exhibition-item img:hover {
+    transform: scale(1.2);
 }
 
 .exhibition-category {
@@ -190,5 +202,91 @@ section {
 }
 .exhibition-item__title:hover {
     cursor: pointer;
+    color: var(--pink-text-color)
+}
+
+
+/* Educational activities */
+.education-content {
+    padding: 0 20% 90px;
+}
+
+.education-content-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+}
+
+.education-content-container i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    background-color: var(--dark-bg-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    opacity: 0.8;
+}
+
+.education-content-container i:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.angle-left-icon {
+    left: -14%;
+}
+
+.angle-right-icon {
+    right: -14%;
+}
+
+.education-content-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+.education-content-item a {
+    width: 47%;
+    overflow: hidden;
+}
+
+.education-content-item a img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.8s;
+}
+
+.education-content-item a img:hover {
+    transform: scale(1.2);
+    
+}
+
+.education-content-item>div {
+    width: 47%;
+}
+
+.education-content-item__date {
+    color: gray;
+    font-weight: 600;
+}
+
+.education-content-item__title {
+    font-size: 1.8rem;
+    color: var(--dark-bg-color);
+    font-weight: 600;
+}
+
+.education-content-item__desc {
+    line-height: 2.4rem;
+    text-align: justify;
+}
+
+.education-content-item__title:hover {
     color: var(--pink-text-color)
 }
