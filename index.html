@@ -54,13 +54,13 @@
                        <a href="index.html" class="nav-item__link">Home</a>
                    </li>
                    <li class="nav-item">
-                       <a href="" class="nav-item__link">Introduction</a>
+                       <a href="introduction.html" class="nav-item__link">Introduction</a>
                    </li>
                    <li class="nav-item">
-                       <a href="" class="nav-item__link">Exhibitions</a>
+                       <a href="upcoming-exhibition.html" class="nav-item__link">Exhibitions</a>
                    </li>
                    <li class="nav-item">
-                       <a href="" class="nav-item__link">Educational activities</a>
+                       <a href="education.html" class="nav-item__link">Education</a>
                    </li>
                    <li class="nav-item">
                     <a href="contact.html" class="nav-item__link">Contact</a>
@@ -170,7 +170,7 @@
             </div>
        </section>
 
-       <!-- Educational activities section -->
+       <!-- Education section -->
        <section class="education">
             <div class="section-title">
                 <h3 class="sub-heading">EDUCATION</H3>
@@ -255,7 +255,62 @@
         </span>
    </footer>
 
+    <!-- Back-to-top button -->
+    <button class="back-to-top hidden">
+        <i class="fa-solid fa-angle-up back-to-top-icon"></i>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+      </svg>
+    </button>
+
    <script>
+        var leftAngelBtn = document.querySelector('.angle-left-icon');
+        var rightAngelBtn = document.querySelector('.angle-right-icon');
+        var slides = document.querySelectorAll('.education-content-item')
+
+
+
+
+   </script>
+
+   <!-- Back-to-top JS -->
+   <script>
+    const showOnPx = 100;
+    const backToTopButton = document.querySelector(".back-to-top");
+    const scrollContainer = () => {
+    return document.documentElement || document.body;
+    };
+
+    const goToTop = () => {
+    document.body.scrollIntoView({
+        behavior: "smooth"
+    });
+    };
+
+    document.addEventListener("scroll", () => {
+    // console.log("Scroll Height: ", scrollContainer().scrollHeight);
+    // console.log("Client Height: ", scrollContainer().clientHeight);
+
+    const scrolledPercentage =
+        (scrollContainer().scrollTop /
+         (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *100;
+
+    if (scrollContainer().scrollTop > showOnPx) {
+     backToTopButton.classList.remove("hidden");
+     } else {
+     backToTopButton.classList.add("hidden");
+     }
+    }
+    );
+
+    backToTopButton.addEventListener("click", goToTop);
+</script>
+
+</body>
+</html>
+
+<!-- 
+
+    
         let slideIndex = 1;
         showSlides(slideIndex);
 
@@ -270,20 +325,18 @@
         }
 
         function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
         }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-        }
-   </script>
-</body>
-</html>
+ -->
