@@ -37,7 +37,7 @@ body {
 }
 
 .about-content-col:first-child img:hover {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
 }
 
 .about-content-col:nth-child(2) {
