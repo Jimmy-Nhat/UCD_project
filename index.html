@@ -34,7 +34,7 @@
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-youtube"></i>
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
-               <a href="">TICKETS</a>
+               <a href="#" id="book_btn">TICKETS</a>
            </div>
        </div>
  
@@ -262,48 +262,51 @@
       </svg>
     </button>
 
-   <script>
+   
+
+    <!-- Back-to-top JS -->
+    <script>
+        const showOnPx = 100;
+        const backToTopButton = document.querySelector(".back-to-top");
+        const scrollContainer = () => {
+        return document.documentElement || document.body;
+        };
+
+        const goToTop = () => {
+        document.body.scrollIntoView({
+            behavior: "smooth"
+        });
+        };
+
+        document.addEventListener("scroll", () => {
+        // console.log("Scroll Height: ", scrollContainer().scrollHeight);
+        // console.log("Client Height: ", scrollContainer().clientHeight);
+
+        const scrolledPercentage =
+            (scrollContainer().scrollTop /
+            (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *100;
+
+        if (scrollContainer().scrollTop > showOnPx) {
+        backToTopButton.classList.remove("hidden");
+        } else {
+        backToTopButton.classList.add("hidden");
+        }
+        }
+        );
+
+        backToTopButton.addEventListener("click", goToTop);
+    </script>
+
+    <script>
         var leftAngelBtn = document.querySelector('.angle-left-icon');
         var rightAngelBtn = document.querySelector('.angle-right-icon');
         var slides = document.querySelectorAll('.education-content-item')
+    </script>
 
+    <script>
+        var bookBtn = document.getElementById('book_btn');
 
-
-
-   </script>
-
-   <!-- Back-to-top JS -->
-   <script>
-    const showOnPx = 100;
-    const backToTopButton = document.querySelector(".back-to-top");
-    const scrollContainer = () => {
-    return document.documentElement || document.body;
-    };
-
-    const goToTop = () => {
-    document.body.scrollIntoView({
-        behavior: "smooth"
-    });
-    };
-
-    document.addEventListener("scroll", () => {
-    // console.log("Scroll Height: ", scrollContainer().scrollHeight);
-    // console.log("Client Height: ", scrollContainer().clientHeight);
-
-    const scrolledPercentage =
-        (scrollContainer().scrollTop /
-         (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *100;
-
-    if (scrollContainer().scrollTop > showOnPx) {
-     backToTopButton.classList.remove("hidden");
-     } else {
-     backToTopButton.classList.add("hidden");
-     }
-    }
-    );
-
-    backToTopButton.addEventListener("click", goToTop);
-</script>
+    </script>
 
 </body>
 </html>
