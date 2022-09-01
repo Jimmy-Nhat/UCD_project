@@ -127,15 +127,17 @@ header {
     margin-right: 16px;
 }
 
-.header--right a {
+.header--right button {
     padding: 8px 16px;
     background-color: var(--pink-text-color);
     border-radius: 6px;
     color: white;
     font-size: 1.5rem;
     font-weight: 550;
+    border: none;
+    outline: none;
 }
-.header--right a:hover {
+.header--right button:hover {
     cursor: pointer;
     opacity: 0.7;
 }
@@ -385,4 +387,119 @@ footer span a {
 
 .display {
     display: block;
+}
+
+/* Form */
+.form-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.book-form {
+    position: fixed;
+    top: 17vh;
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #edecec;
+    padding: 32px 0;
+    z-index: 10000;
+    transition: 0.5s linear;
+    transform: translateY(-150%);
+}
+
+.form-header {
+    width: 100%;
+    text-align: center;
+}
+
+.book-form i {
+    text-align: right;
+    position: absolute;
+    top: 18px;
+    font-size: 2rem;
+    color: var(--dark-bg-color);
+    right: 18px;
+}
+
+.book-form i:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.form-header h3 {
+    font-size: 2rem;
+    color: var(--dark-bg-color);
+    margin: 0 32px 16px;
+    text-align: center;
+}
+
+.form-field {
+    width: 100%;
+    margin: 0 32px 10px;
+}
+
+
+.form-field__label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--dark-bg-color);
+}
+
+.form-field__input {
+    width: 100%;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    margin: 7px 0;
+    padding: 10px 14px;
+    border-radius: 6px;
+    box-shadow: rgb(221 221 221 / 13%) 0px 2px 8px 0px;
+}
+
+.form-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.8;
+    background-color: #131313;
+    display: none;
+}
+
+.send_book_btn {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--pink-text-color);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    width: 100%;
+    margin: 24px 20px 6px;
+    padding: 12px;
+    text-align: center;
+}
+
+.send_book_btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.form-field:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.form-field input[type='radio'] {
+    margin: 0;
+    margin-top: 2px
+}
+
+.form-field span {
+    padding: 0 12px 0 24px;
+    font-size: 1.4rem;
 }
